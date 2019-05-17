@@ -1,6 +1,14 @@
 .App {
   text-align: center;
+  background-color: #f2f2f2!important
 }
+
+/* {
+  #ececec
+  #e1e1e1
+  #b2b355
+  #f2f2f2
+} */
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
@@ -21,6 +29,27 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.card-body{
+  text-align: 'justify' !important;
+  padding: 1rem 0.5rem 1rem 0.5rem !important;
+}
+
+.dropdown-menu {
+  margin: 0.525rem 0 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+}
+
+.dropdown-toggle::after {
+  display:none;
+}
+
+.dropdown-item{
+  padding: .15rem 1.1rem !important;
+  border-bottom: 2px solid #f1f2f2 !important;
 }
 
 @keyframes App-logo-spin {
