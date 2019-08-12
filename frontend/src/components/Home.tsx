@@ -31,7 +31,7 @@ componentDidMount() {
   
   public render() {
 
-    console.log(this.props.categories)
+    // console.log(this.props)
 
     return (
       <Container>

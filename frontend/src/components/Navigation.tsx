@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { Navbar, Nav, NavDropdown, DropdownButton } from 'react-bootstrap'
+import { NavLink, Link } from "react-router-dom"
 
 export interface NavigationProps {
   categories: []
@@ -13,17 +14,17 @@ export default class Navigation extends React.Component<NavigationProps, any> {
     return (
       <div>
       <Navbar bg="white" variant="light">
-      <Navbar.Brand href="#home">Readable</Navbar.Brand>
+      <Navbar.Brand>Readable</Navbar.Brand>
         <Nav className="mr-auto">
-          <Nav.Link href="#home">Home</Nav.Link>
-            <NavDropdown title="Categories" id="basic-nav-dropdown">
+          <Nav.Link as={NavLink} to='/'>Home</Nav.Link>
+            <NavDropdown as={NavLink} to='#'  title="Categories" id="basic-nav-dropdown">
             { categories.map((categori: any) => (
-            <NavDropdown.Item  key={categori.name}>{categori.name.charAt(0).toUpperCase()+ categori.name.slice(1)}</NavDropdown.Item>
+            <NavDropdown.Item as={NavLink} key={categori.name} to={`/${categori.name}/posts`}>{categori.name.charAt(0).toUpperCase()+ categori.name.slice(1)}</NavDropdown.Item>
             ))
              }
           </NavDropdown>
 
-      <Nav.Link href="#users">Leader Board</Nav.Link>
+      <Nav.Link as={NavLink} to='/leaderboard'>Leader Board</Nav.Link>
       </Nav>
       </Navbar>
       </div>
