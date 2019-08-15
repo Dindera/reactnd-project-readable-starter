@@ -14,3 +14,5 @@ export const posts = () =>
  fetch(`${api}/posts`, { headers })
  .then(res => res.json())
  .then(data => data)   
+
+//  export const 
